@@ -12,7 +12,7 @@
         data () {
             return {
                 name:"huaQiuQiu",
-                age:"25"
+                age:"26"
             }
         }
     }

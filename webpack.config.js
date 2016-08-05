@@ -26,9 +26,15 @@ module.exports={
             loader: "html-loader"
         }]
     },
+    //删除也没有影响
     vue: {
         loaders: {
             js: "babel"
         }
+    },
+    resolve: {
+        // require时省略的扩展名，如：require('module') 不需要module.js
+        extensions: ["", ".js", ".vue"],
+        // 别名，可以直接使用别名来代表设定的路径以及其他
     }
 }

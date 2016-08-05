@@ -1,6 +1,7 @@
 //使用es6的模块系统import 模块
 //使用babel来编译es6
 
+require("!style!css!./style/main.css");
 import Vue from "vue";
 
 new Vue({
@@ -59,9 +60,8 @@ new Vue({
 })
 
 
-//构建组件通过.vue文件
-
-import app from "./components/app.vue"
+//通过.vue文件构建组件
+import app from "./components/app"
 
 Vue.config.debug = true;
 
