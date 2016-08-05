@@ -8,6 +8,10 @@ module.exports={
     },
     module:{
         loaders:[{
+            test: /\.vue$/,
+            loader: "vue"
+        },
+        {
             test: /\.css$/,
             loader: "style!css"
         },
@@ -16,9 +20,15 @@ module.exports={
             loader: "babel-loader",
             // 不用转换的node_modules文件夹
             exclude: /node_modules/
-        }{
-            test: /\.vue$/,
-            loader: "vue"
+        },
+        { 
+            test: /\.(html|tpl)$/,
+            loader: "html-loader"
         }]
+    },
+    vue: {
+        loaders: {
+            js: "babel"
+        }
     }
 }
