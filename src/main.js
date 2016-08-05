@@ -22,6 +22,42 @@ new Vue({
     }
 })
 
+//demo3 处理点击事件
+new Vue({
+    el:"#demo3",
+    data:{
+        message:"Hello HuaQiuQiu"
+    },
+    methods:{
+        reverseMessage:function(){
+            console.log(this);
+            this.message = this.message.split("").reverse().join("");
+        }
+    }
+})
+
+//demo4 todoMVC
+new Vue({
+    el:"#todoMVC",
+    data:{
+        newTodo:"",
+        todos:[
+            {msg:"todo No.1"}
+        ]
+    },
+    methods:{
+        addTodo:function(){
+            this.todos.push({
+                msg:this.newTodo
+            })
+            this.newTodo = "";
+        },
+        removeTodo:function(index){
+            this.todos.splice(index,1);
+        }
+    }
+})
+
 
 //构建组件通过.vue文件
 
