@@ -1,5 +1,7 @@
 module.exports={
-    entry:"./src/entry.js",
+    //course的entry
+    //entry:"./src/course/entry.js",
+    entry:"./src/main.js",
     output:{
         path:"./dist",
         filename:"build.js"
@@ -8,6 +10,15 @@ module.exports={
         loaders:[{
             test: /\.css$/,
             loader: "style!css"
+        },
+        {
+            test: /\.js$/,
+            loader: "babel-loader",
+            // 不用转换的node_modules文件夹
+            exclude: /node_modules/
+        }{
+            test: /\.vue$/,
+            loader: "vue"
         }]
     }
 }
