@@ -61,8 +61,11 @@ new Vue({
 
 //构建组件通过.vue文件
 
-import app from "./components/app.vue";
+import app from "./components/app.vue"
 
 Vue.config.debug = true;
 
-new Vue(app);
+new Vue({
+    el:"body",
+    components:{app}
+})

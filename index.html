@@ -8,12 +8,15 @@
   <body>
     <!--vue-->
     <!-- 双向绑定 -->
+    <h3>demo1</h3>
     <div id="demo1">
       <h3>{{ message }}</h3>
       <input v-model="message">
     </div>
+    <br>
 
     <!-- list -->
+    <h3>demo2</h3>
     <div id="demo2">
       <ul>
         <li v-for="msg in msgs">
@@ -21,13 +24,17 @@
         </li>
       </ul>
     </div>
+    <br>
 
     <!-- click事件 -->
+    <h3>demo3</h3>
     <div id="demo3">
       <p>{{message}}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
+    <br>
 
+    <h3>demo4</h3>
     <div id="todoMVC">
       <input v-model="newTodo" v-on:keyup.enter="addTodo()">
       <ul>
@@ -38,7 +45,8 @@
       </ul>
     </div>
 
-
+    <!-- app组件 -->
+    <h3>app组件</h3>
     <app></app>
     <script src="dist/build.js"></script>
   </body>
