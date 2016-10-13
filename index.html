@@ -2,53 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>webpack Vue Example</title>
+    <title>Webpack Vue Example</title>
+    
   </head>
 
   <body>
-    <!--vue-->
-    <!-- 双向绑定 -->
-    <h3>demo1</h3>
-    <div id="demo1">
-      <h3>{{ message }}</h3>
-      <input v-model="message">
-    </div>
-    <br>
+  <!--
+    <!--
+    <pm-header></pm-header>
+    
+    <div id="main" style="margin-top:200px;">
+      <!--vue-->
+      <!-- 双向绑定 
+      <h3>demo1</h3>
+      <div id="demo1">
+        <h3>{{ message }}</h3>
+        <input v-model="message">
+      </div>
+      <br>
 
-    <!-- list -->
-    <h3>demo2</h3>
-    <div id="demo2">
-      <ul>
-        <li v-for="msg in msgs">
-          {{ msg.text }}
-        </li>
-      </ul>
-    </div>
-    <br>
+      <!-- list
+      <h3>demo2</h3>
+      <div id="demo2">
+        <ul>
+          <li v-for="msg in msgs">
+            {{ msg.text }}
+          </li>
+        </ul>
+      </div>
+      <br>
 
-    <!-- click事件 -->
-    <h3>demo3</h3>
-    <div id="demo3">
-      <p>{{message}}</p>
-      <button v-on:click="reverseMessage">Reverse Message</button>
-    </div>
-    <br>
+      <!-- click事件 
+      <h3>demo3</h3>
+      <div id="demo3">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+      </div>
+      <br>
 
-    <h3>demo4</h3>
-    <div id="todoMVC">
-      <input v-model="newTodo" v-on:keyup.enter="addTodo()">
-      <ul>
-        <li v-for="todo in todos">
-          <span>{{todo.msg}}</span>
-          <button v-on:click="removeTodo($index)">X</button>
-        </li>
-      </ul>
-    </div>
-    <br>
+      <h3>demo4</h3>
+      <div id="todoMVC">
+        <input v-model="newTodo" v-on:keyup.enter="addTodo()">
+        <ul>
+          <li v-for="todo in todos">
+            <span>{{todo.msg}}</span>
+            <button v-on:click="removeTodo($index)">X</button>
+          </li>
+        </ul>
+      </div>
+      <br>
 
-    <!-- app组件 -->
-    <h3>app组件</h3>
-    <app></app>
+      <!-- app组件
+      <h3>app组件</h3>
+      <app></app>
+
+
+      
+    </div>
+    <!-- app组件 
+    <h3>pushMenu组件</h3>
+     -->
+
+    <!-- 兄弟组件之间的通讯 -->
+    <div id="container">
+      <left-menu></left-menu>
+      <md-header>
+        <div slot="article" class="article"></slot>
+      </md-header>
+    </div>
+    
+    
     <script src="dist/build.js"></script>
   </body>
 </html>
